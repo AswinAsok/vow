@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react"
 import styles from "./Home.module.css"
 import affirmation from "./affirmations.json"
 import facts from "./facts.json"
+import axios from "axios"
 
 const Home = () => {
   const [affirmationVar, setAffirmationVar] = useState("")
   const [affirmationFact, setAffirmationFact] = useState("")
+  const [stars, setStars] = useState(0)
 
   //from the affirmation.json file load a random affirmation on page load
   useEffect(() => {
@@ -14,6 +16,19 @@ const Home = () => {
         Math.floor(Math.random() * affirmation.affirmations.length)
       ]
     setAffirmationVar(randomAffirmation)
+  }, [])
+
+  useEffect(() => {
+    axios
+      .get("https://api.github.com/repos/AswinAsok/vow")
+      .then((response) => {
+        // handle success
+        setStars(response.data.stargazers_count)
+      })
+      .catch((error) => {
+        // handle error
+        console.log(error)
+      })
   }, [])
 
   //From the facts.json file load a random fact on page load
@@ -41,8 +56,20 @@ const Home = () => {
               <p className={styles.affimation_fact}>{affirmationFact}</p>
             </div>
             <div className={styles.buttons_container}>
-              <button className={styles.star_button}>100 Stars</button>
-              <button className={styles.follow_button}>Follow Me</button>
+              <a
+                href="https://github.com/AswinAsok/vow"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className={styles.star_button}>{stars} Stars</button>
+              </a>
+              <a
+                href="http://github.com/AswinAsok"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className={styles.follow_button}>Follow Me</button>
+              </a>
             </div>
           </div>
         </div>

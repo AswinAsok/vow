@@ -38,7 +38,6 @@ a {
   text-align: center;
 }
 
-
 .first_view {
   max-width: 1000px;
   margin: auto;
@@ -80,6 +79,12 @@ a {
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
+}
+
+.star_button:hover,
+.follow_button:hover {
+  background-color: #494748;
+  transition: ease-in-out 0.2s;
 }
 
 /* Set the initial state of all elements to invisible */
