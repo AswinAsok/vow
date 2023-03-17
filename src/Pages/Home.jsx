@@ -41,13 +41,13 @@ const Home = () => {
 
   return (
     <>
-      <div className={styles.navbar}>
-        <div className={styles.navbar_container}>
-          <p className={styles.n_header}>vow.</p>
-          <p className={styles.n_text}>dose of daily affirmation</p>
-        </div>
-      </div>
       <div className={styles.main_container}>
+        <div className={styles.navbar}>
+          <div className={styles.navbar_container}>
+            <p className={styles.n_header}>vow.</p>
+            <p className={styles.n_text}>dose of daily affirmation</p>
+          </div>
+        </div>
         <div className={styles.first_view_container}>
           <div className={styles.first_view}>
             <div className={styles.fv_texts}>
@@ -73,21 +73,21 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className={styles.footer}>
-        <p className={styles.n_text}>
-          Made by{" "}
-          <a
-            href="http://github.com/AswinAsok"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Aswin Asok
-          </a>{" "}
-          with Code
-        </p>
-        <p className={styles.n_text}>Midnight Projects#3</p>
-        <br />
+        <div className={styles.footer}>
+          <p className={styles.n_text}>
+            Made by{" "}
+            <a
+              href="http://github.com/AswinAsok"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Aswin Asok
+            </a>{" "}
+            with Code
+          </p>
+          <p className={styles.n_text}>Midnight Projects#3</p>
+          <br />
+        </div>
       </div>
     </>
   )

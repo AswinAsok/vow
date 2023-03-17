@@ -4,8 +4,11 @@
   font-family: "Quicksand", sans-serif;
 }
 
-.first_view_container {
+.main_container {
   background-color: #fbfbf5;
+}
+
+.first_view_container {
   min-height: 85vh;
   display: flex;
   flex-direction: column;
