@@ -27,6 +27,5 @@ Contributions are always welcome! If you would like to contribute to this projec
 If you have any questions or comments about this project, please feel free to contact at aswinasokofficail@gmail.com
 
 ## 🌟 About Midnight Projects
-Vow is part of the Midnight Projects series, which is a collection of small web applications that are designed to promote positivity and personal growth.
-Each project is built with a different set of technologies and has a unique set of features.
+Vow is part of the Midnight Projects series,which is a collection of small web applications that are designed to be fun, creative, and easy to use and much more. Each project is built with a different set of technologies and has a unique set of features.
 Check out our other projects on My Github Account.
