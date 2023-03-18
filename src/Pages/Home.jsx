@@ -3,11 +3,15 @@ import styles from "./Home.module.css"
 import affirmation from "./affirmations.json"
 import facts from "./facts.json"
 import axios from "axios"
+import { RxReload } from "react-icons/rx"
+import { AiOutlineStar } from "react-icons/ai"
+import { BsStar } from "react-icons/bs"
 
 const Home = () => {
   const [affirmationVar, setAffirmationVar] = useState("")
   const [affirmationFact, setAffirmationFact] = useState("")
   const [stars, setStars] = useState(0)
+  const [reload, setReload] = useState(false)
 
   //from the affirmation.json file load a random affirmation on page load
   useEffect(() => {
@@ -16,7 +20,7 @@ const Home = () => {
         Math.floor(Math.random() * affirmation.affirmations.length)
       ]
     setAffirmationVar(randomAffirmation)
-  }, [])
+  }, [reload])
 
   useEffect(() => {
     axios
@@ -50,6 +54,20 @@ const Home = () => {
         </div>
         <div className={styles.first_view_container}>
           <div className={styles.first_view}>
+            <div className={styles.icons}>
+              <div className={styles.icon}>
+                <RxReload onClick={() => setReload(!reload)} size={30} />
+              </div>
+              <div className={styles.icon}>
+                <a
+                  href="https://github.com/AswinAsok/vow"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <BsStar size={32} />
+                </a>
+              </div>
+            </div>
             <div className={styles.fv_texts}>
               <p className={styles.affirmation}>{affirmationVar}</p>
               <p className={styles.fact_preheader}>DID YOU KNOW?</p>

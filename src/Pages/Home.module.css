@@ -9,12 +9,22 @@
 }
 
 .first_view_container {
-  min-height: 85vh;
+  min-height: 88vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.icon {
+  margin: 1rem;
 }
 
 .navbar {
